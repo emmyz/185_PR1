@@ -1,3 +1,7 @@
+// https://www.w3schools.com/howto/howto_css_overlay.asp
+// https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+
 var myImgs = document.querySelectorAll("img");
 for (let i = 0; i < myImgs.length; i++) {
   myImgs[i].addEventListener("click", function (evt) {
