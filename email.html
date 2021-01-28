@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Text</a></li>
+      <li><a href="image.html">Image</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="email.html">Email</a></li>
+    </ul>
+  </nav>
+  <script type="text/javascript">
+    const currentURL = window.location.href;
+    const navItem = document.querySelectorAll("a");
+    const navLength = navItem.length;
+    for (let i = 0; i < navLength; i++) {
+      if (navItem[i].href === currentURL) {
+        navItem[i].className = "active";
+      }
+    }
+  </script>
+  <br />
+  <section id="form_container">
+    <form>
+      <label for="email">Email:</label>
+      <br />
+      <input type="text" id="email" name="email" />
+      <h6 id="message"></h6>
+
+      <button type="button" onclick="validateEmail()">Submit</button>
+    </form>
+  </section>
+  <button id="btt_btn">Back To Top</button>
+  <script type="text/javascript" src="script.js"></script>
+</body>

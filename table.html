@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Table</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav_container">
-    <a class="nav_item" href="index.html">Text</a>
-    <a class="nav_item" href="image.html">Image</a>
-    <a class="nav_item" href="video.html">Video</a>
-    <a class="nav_item" href="table.html">Table</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Text</a></li>
+      <li><a href="image.html">Image</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="email.html">Email</a></li>
+    </ul>
   </nav>
+  <script type="text/javascript">
+    const currentURL = window.location.href;
+    const navItem = document.querySelectorAll("a");
+    const navLength = navItem.length;
+    for (let i = 0; i < navLength; i++) {
+      if (navItem[i].href === currentURL) {
+        navItem[i].className = "active";
+      }
+    }
+  </script>
   <h1>Projects</h1>
   <table>
     <thead>

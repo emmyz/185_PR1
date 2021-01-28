@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Video</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav_container">
-    <a class="nav_item" href="index.html">Text</a>
-    <a class="nav_item" href="image.html">Image</a>
-    <a class="nav_item" href="video.html">Video</a>
-    <a class="nav_item" href="table.html">Table</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Text</a></li>
+      <li><a href="image.html">Image</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="email.html">Email</a></li>
+    </ul>
   </nav>
+  <script type="text/javascript">
+    const currentURL = window.location.href;
+    const navItem = document.querySelectorAll("a");
+    const navLength = navItem.length;
+    for (let i = 0; i < navLength; i++) {
+      if (navItem[i].href === currentURL) {
+        navItem[i].className = "active";
+      }
+    }
+  </script>
+  <button id="btt_btn">Back To Top</button>
+  
   <div class="vid_container">
-    <iframe class="vid_item" src="https://www.youtube.com/embed/9E6b3swbnWg"></iframe>
-    <iframe class="vid_item" src="https://www.youtube.com/embed/nJSyAjx2rHA"></iframe>
-    <iframe class="vid_item" src="https://www.youtube.com/embed/q9rvyvssvuI"></iframe>
+    <div ><video class="vid_item" onclick="olVideos(this)" src="videos/v1.mp4" autoplay></video></div>
+		<div ><video class="vid_item" onclick="olVideos(this)" src="videos/v2.mp4" autoplay></video></div>
+		<div><video class="vid_item" onclick="olVideos(this)" src="videos/v3.mp4" autoplay></video></div>
+		<div ><video class="vid_item" onclick="olVideos(this)" src="videos/v4.mp4" autoplay></video></div>
+  </div>
+  <div class="overlay" id="overlay" >
+    <video class="ol_item" id="ol_video" controls>
+      
+    </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
