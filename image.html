@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Image</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav_container">
-    <a class="nav_item" href="index.html">Text</a>
-    <a class="nav_item" href="image.html">Image</a>
-    <a class="nav_item" href="video.html">Video</a>
-    <a class="nav_item" href="table.html">Table</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Text</a></li>
+      <li><a href="image.html">Image</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="email.html">Email</a></li>
+    </ul>
   </nav>
+  <script type="text/javascript">
+    const currentURL = window.location.href;
+    const navItem = document.querySelectorAll("a");
+    const navLength = navItem.length;
+    for (let i = 0; i < navLength; i++) {
+      if (navItem[i].href === currentURL) {
+        navItem[i].className = "active";
+      }
+    }
+  </script>
+
   <div class="img_container">
     <img class="img_item" src="images/i1.jpeg" />
     <img class="img_item" src="images/i2.jpeg" />
@@ -17,5 +33,30 @@
     <img class="img_item" src="images/i4.jpeg" />
     <img class="img_item" src="images/i5.jpeg" />
     <img class="img_item" src="images/i6.jpeg" />
+    <img class="img_item" src="images/i7.jpeg" />
+    <img class="img_item" src="images/i8.jpeg" />
+    <img class="img_item" src="images/i9.jpeg" />
+    <img class="img_item" src="images/i10.jpeg" />
+    <img class="img_item" src="images/i11.jpeg" />
+    <img class="img_item" src="images/i12.jpeg" />
+    <img class="img_item" src="images/i13.jpeg" />
+    <img class="img_item" src="images/i14.jpeg" />
+    <img class="img_item" src="images/i15.jpeg" />
+    <img class="img_item" src="images/i16.jpeg" />
+    <img class="img_item" src="images/i17.jpeg" />
+    <img class="img_item" src="images/i18.jpeg" />
+    <img class="img_item" src="images/i19.jpeg" />
+    <img class="img_item" src="images/i20.jpeg" />
+    <img class="img_item" src="images/i21.jpeg" />
+    <img class="img_item" src="images/i22.jpeg" />
+    <img class="img_item" src="images/i23.jpeg" />
+    <img class="img_item" src="images/i24.jpeg" />
+    <img class="img_item" src="images/i25.jpeg" />
+    <img class="img_item" src="images/i26.jpeg" />
   </div>
+  <button id="btt_btn">Back To Top</button>
+  <div class="overlay" id="overlay">
+    <img class="ol_item" id="ol_image" />
+  </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
